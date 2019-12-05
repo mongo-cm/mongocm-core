@@ -1,0 +1,26 @@
+[Unit]
+Description=MONGOcm's distributed currency daemon
+After=network.target
+
+[Service]
+User=mongocm
+Group=mongocm
+
+Type=forking
+PIDFile=/var/lib/mongocmd/mongocmd.pid
+
+ExecStart=/usr/bin/mongocmd -daemon -pid=/var/lib/mongocmd/mongocmd.pid \
+          -conf=/etc/mongocm/mongocm.conf -datadir=/var/lib/mongocmd
+
+ExecStop=-/usr/bin/mongocm-cli -conf=/etc/mongocm/mongocm.conf \
+         -datadir=/var/lib/mongocmd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

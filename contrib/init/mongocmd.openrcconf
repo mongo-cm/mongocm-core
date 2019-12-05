@@ -1,0 +1,26 @@
+# /etc/conf.d/mongocmd: config file for /etc/init.d/mongocmd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/mongocm/mongocm.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/mongocmd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/mongocmd.pid"
+
+# Where to write mongocmd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/mongocmd"
+
+# User and group to own mongocmd process
+#BITCOIND_USER="mongocm"
+#BITCOIND_GROUP="mongocm"
+
+# Path to mongocmd executable
+#BITCOIND_BIN="/usr/bin/mongocmd"
+
+# Nice value to run mongocmd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

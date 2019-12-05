@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=MONGOcm
+Comment=MONGOcm P2P Cryptocurrency
+Comment[fr]=MONGOcm, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=MONGOcm, eşten eşe kriptografik sanal para birimi
+Exec=mongocm-qt %u
+Terminal=false
+Type=Application
+Icon=mongocm128
+MimeType=x-scheme-handler/mongocm;
+Categories=Office;Finance;
